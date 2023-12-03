@@ -68,9 +68,9 @@ void registerClass() {
 //        reinterpret_cast<void (*)(id, SEL, id)>(objc_msgSend)(options, sel_registerName("setSpecification:"), specification);
 //        [specification release];
         
-        id specification = [NSClassFromString(@"UIApplicationSceneSpecification") new];
-        reinterpret_cast<void (*)(id, SEL, id)>(objc_msgSend)(options, sel_registerName("setSpecification:"), specification);
-        [specification release];
+//        id specification = [NSClassFromString(@"UIApplicationSceneSpecification") new];
+//        reinterpret_cast<void (*)(id, SEL, id)>(objc_msgSend)(options, sel_registerName("setSpecification:"), specification);
+//        [specification release];
         
         id sharedWorkspace = reinterpret_cast<id (*)(Class, SEL)>(objc_msgSend)(NSClassFromString(@"FBSWorkspace"), sel_registerName("_sharedWorkspaceIfExists"));
         
